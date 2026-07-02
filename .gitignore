@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+
+# Claude Code tooling and local machine config
+.claude/
+
+# Local scratch / temp
+scratchpad/
+
+# Heavy source report (14 MB). Download from the NRW SoNaRR 2025 page if you
+# need to re-run extraction; not required to run the web app.
+sonarr2025-final-report.pdf
+
+# Python
+__pycache__/
+*.pyc
+
+# NRW SoNaRR 2025 portal data exports (published open data; kept out of this
+# repo). Download from the NRW SoNaRR 2025 portal to re-run extract_graph.py.
+SoNaRR2025 Portal*.xlsx
+~$*.xlsx

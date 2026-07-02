@@ -1,0 +1,2038 @@
+{
+  "meta": {
+    "title": "Wales SoNaRR 2025 Fuzzy Cognitive Map",
+    "source": "SoNaRR 2025 (NRW), 8 Power BI portal spreadsheets, DPSIR structure",
+    "sign_convention": "driver->pressure +, pressure->state -, state->service +",
+    "weight_note": "Edge weights are a uniform prior (SoNaRR asserts the link but does not rate its strength); confidence sets uncertainty; users set the weights.",
+    "default_weight": 0.5
+  },
+  "nodes": [
+    {
+      "id": "driver:climate_change",
+      "label": "Climate change",
+      "kind": "driver",
+      "initial": 0.6
+    },
+    {
+      "id": "driver:direct_exploitation",
+      "label": "Direct exploitation",
+      "kind": "driver",
+      "initial": 0.6
+    },
+    {
+      "id": "driver:inns_pests_and_diseases",
+      "label": "INNS, pests and diseases",
+      "kind": "driver",
+      "initial": 0.6
+    },
+    {
+      "id": "driver:land_and_sea_use_change",
+      "label": "Land and sea use change",
+      "kind": "driver",
+      "initial": 0.6
+    },
+    {
+      "id": "driver:pollution",
+      "label": "Pollution",
+      "kind": "driver",
+      "initial": 0.6
+    },
+    {
+      "id": "pressure:access_sport_recreational_activity",
+      "label": "Access, sport, recreational activity",
+      "kind": "pressure",
+      "trend_counts": {
+        "mixed picture": 3,
+        "not available": 1,
+        "deteriorating": 5
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:afforestation",
+      "label": "Afforestation",
+      "kind": "pressure",
+      "trend_counts": {
+        "improving": 5,
+        "mixed picture": 5,
+        "stable": 2,
+        "deteriorating": 2,
+        "not available": 1
+      },
+      "initial": 0.6,
+      "dominant_trend": "improving"
+    },
+    {
+      "id": "pressure:agricultural_intensification",
+      "label": "Agricultural intensification",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 9,
+        "mixed picture": 11,
+        "stable": 1,
+        "not available": 3
+      },
+      "initial": 0.6,
+      "dominant_trend": "mixed picture"
+    },
+    {
+      "id": "pressure:air_pollution",
+      "label": "Air pollution",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 8,
+        "stable": 1,
+        "not available": 2,
+        "mixed picture": 13,
+        "improving": 6
+      },
+      "initial": 0.6,
+      "dominant_trend": "mixed picture"
+    },
+    {
+      "id": "pressure:built_development_and_infrastructure",
+      "label": "Built development and infrastructure",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 16,
+        "not available": 5,
+        "mixed picture": 9,
+        "stable": 1,
+        "improving": 2
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:changes_in_air_temperature_includes_rainfall_trends",
+      "label": "Changes in air temperature (includes rainfall trends)",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 16,
+        "mixed picture": 2,
+        "not available": 3
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "label": "Changes in intensity and frequency of weather events",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 24,
+        "not available": 5,
+        "mixed picture": 1
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:changes_in_water_temperature",
+      "label": "Changes in water temperature",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 12
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:drainage",
+      "label": "Drainage",
+      "kind": "pressure",
+      "trend_counts": {
+        "improving": 2,
+        "mixed picture": 3,
+        "deteriorating": 1
+      },
+      "initial": 0.6,
+      "dominant_trend": "mixed picture"
+    },
+    {
+      "id": "pressure:fisheries",
+      "label": "Fisheries",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 1,
+        "improving": 2,
+        "not available": 3
+      },
+      "initial": 0.6,
+      "dominant_trend": "not available"
+    },
+    {
+      "id": "pressure:inns",
+      "label": "INNS",
+      "kind": "pressure",
+      "trend_counts": {
+        "mixed picture": 5,
+        "deteriorating": 16,
+        "not available": 1
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:land_pollution",
+      "label": "Land pollution",
+      "kind": "pressure",
+      "trend_counts": {
+        "not available": 5,
+        "deteriorating": 3,
+        "mixed picture": 4
+      },
+      "initial": 0.6,
+      "dominant_trend": "not available"
+    },
+    {
+      "id": "pressure:large_mammal_herbivore_activities",
+      "label": "Large mammal herbivore activities",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 3
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:light_pollution",
+      "label": "Light pollution",
+      "kind": "pressure",
+      "trend_counts": {
+        "not available": 4,
+        "deteriorating": 2,
+        "mixed picture": 2,
+        "improving": 1
+      },
+      "initial": 0.6,
+      "dominant_trend": "not available"
+    },
+    {
+      "id": "pressure:noise_pollution",
+      "label": "Noise pollution",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 2,
+        "mixed picture": 2,
+        "not available": 4,
+        "improving": 1
+      },
+      "initial": 0.6,
+      "dominant_trend": "not available"
+    },
+    {
+      "id": "pressure:non_efficient_use",
+      "label": "Non-efficient use",
+      "kind": "pressure",
+      "trend_counts": {
+        "improving": 1,
+        "mixed picture": 2
+      },
+      "initial": 0.6,
+      "dominant_trend": "mixed picture"
+    },
+    {
+      "id": "pressure:ocean_acidification",
+      "label": "Ocean acidification",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 2,
+        "not available": 1
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:pests_and_diseases",
+      "label": "Pests and diseases",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 10,
+        "not available": 2,
+        "mixed picture": 3
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:physical_modification_freshwater_and_coastal",
+      "label": "Physical modification (freshwater and coastal)",
+      "kind": "pressure",
+      "trend_counts": {
+        "mixed picture": 1,
+        "deteriorating": 7,
+        "stable": 2,
+        "improving": 2
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:reduced_land_use_management_intensity",
+      "label": "Reduced land use / management intensity",
+      "kind": "pressure",
+      "trend_counts": {
+        "mixed picture": 8,
+        "improving": 3,
+        "deteriorating": 5,
+        "not available": 1
+      },
+      "initial": 0.6,
+      "dominant_trend": "mixed picture"
+    },
+    {
+      "id": "pressure:sea_level_rise",
+      "label": "Sea level rise",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 13,
+        "not available": 5
+      },
+      "initial": 0.6,
+      "dominant_trend": "deteriorating"
+    },
+    {
+      "id": "pressure:water_abstraction_and_demand",
+      "label": "Water abstraction and demand",
+      "kind": "pressure",
+      "trend_counts": {
+        "improving": 2,
+        "mixed picture": 7
+      },
+      "initial": 0.6,
+      "dominant_trend": "mixed picture"
+    },
+    {
+      "id": "pressure:water_pollution",
+      "label": "Water pollution",
+      "kind": "pressure",
+      "trend_counts": {
+        "deteriorating": 3,
+        "not available": 7,
+        "mixed picture": 13,
+        "improving": 1
+      },
+      "initial": 0.6,
+      "dominant_trend": "mixed picture"
+    },
+    {
+      "id": "service:cultural",
+      "label": "Cultural",
+      "kind": "service",
+      "initial": 0.5
+    },
+    {
+      "id": "service:provisioning",
+      "label": "Provisioning",
+      "kind": "service",
+      "initial": 0.5
+    },
+    {
+      "id": "service:regulating",
+      "label": "Regulating",
+      "kind": "service",
+      "initial": 0.5
+    },
+    {
+      "id": "state:coastal_margins",
+      "label": "Coastal margins",
+      "kind": "state_ecosystem",
+      "initial": 0.38,
+      "n_state_rows": 20
+    },
+    {
+      "id": "state:enclosed_farmland",
+      "label": "Enclosed farmland",
+      "kind": "state_ecosystem",
+      "initial": 0.425,
+      "n_state_rows": 20
+    },
+    {
+      "id": "state:freshwater",
+      "label": "Freshwater",
+      "kind": "state_ecosystem",
+      "initial": 0.35,
+      "n_state_rows": 26
+    },
+    {
+      "id": "state:marine",
+      "label": "Marine",
+      "kind": "state_ecosystem",
+      "initial": 0.537,
+      "n_state_rows": 8
+    },
+    {
+      "id": "state:mountain_moorland_and_heath",
+      "label": "Mountain, moorland and heath",
+      "kind": "state_ecosystem",
+      "initial": 0.382,
+      "n_state_rows": 28
+    },
+    {
+      "id": "state:semi_natural_grassland",
+      "label": "Semi-natural grassland",
+      "kind": "state_ecosystem",
+      "initial": 0.388,
+      "n_state_rows": 8
+    },
+    {
+      "id": "state:urban",
+      "label": "Urban",
+      "kind": "state_ecosystem",
+      "initial": 0.3,
+      "n_state_rows": 9
+    },
+    {
+      "id": "state:woodlands",
+      "label": "Woodlands",
+      "kind": "state_ecosystem",
+      "initial": 0.575,
+      "n_state_rows": 8
+    },
+    {
+      "id": "state:air",
+      "label": "Air",
+      "kind": "state_resource",
+      "initial": 0.519,
+      "n_state_rows": 16
+    },
+    {
+      "id": "state:soil",
+      "label": "Soil",
+      "kind": "state_resource",
+      "initial": 0.46,
+      "n_state_rows": 30
+    },
+    {
+      "id": "state:water",
+      "label": "Water",
+      "kind": "state_resource",
+      "initial": 0.56,
+      "n_state_rows": 15
+    }
+  ],
+  "edges": [
+    {
+      "source": "driver:climate_change",
+      "target": "pressure:changes_in_air_temperature_includes_rainfall_trends",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Climate change -> Changes in air temperature (includes rainfall trends)",
+      "kind": "driver_pressure",
+      "support": 21
+    },
+    {
+      "source": "driver:climate_change",
+      "target": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Climate change -> Changes in intensity and frequency of weather events",
+      "kind": "driver_pressure",
+      "support": 30
+    },
+    {
+      "source": "driver:climate_change",
+      "target": "pressure:changes_in_water_temperature",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Climate change -> Changes in water temperature",
+      "kind": "driver_pressure",
+      "support": 12
+    },
+    {
+      "source": "driver:climate_change",
+      "target": "pressure:ocean_acidification",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Climate change -> Ocean acidification",
+      "kind": "driver_pressure",
+      "support": 3
+    },
+    {
+      "source": "driver:climate_change",
+      "target": "pressure:sea_level_rise",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Climate change -> Sea level rise",
+      "kind": "driver_pressure",
+      "support": 18
+    },
+    {
+      "source": "driver:direct_exploitation",
+      "target": "pressure:drainage",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Direct exploitation -> Drainage",
+      "kind": "driver_pressure",
+      "support": 6
+    },
+    {
+      "source": "driver:direct_exploitation",
+      "target": "pressure:fisheries",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Direct exploitation -> Fisheries",
+      "kind": "driver_pressure",
+      "support": 6
+    },
+    {
+      "source": "driver:direct_exploitation",
+      "target": "pressure:non_efficient_use",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Direct exploitation -> Non-efficient use",
+      "kind": "driver_pressure",
+      "support": 3
+    },
+    {
+      "source": "driver:direct_exploitation",
+      "target": "pressure:water_abstraction_and_demand",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Direct exploitation -> Water abstraction and demand",
+      "kind": "driver_pressure",
+      "support": 9
+    },
+    {
+      "source": "driver:inns_pests_and_diseases",
+      "target": "pressure:inns",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "INNS, pests and diseases -> INNS",
+      "kind": "driver_pressure",
+      "support": 22
+    },
+    {
+      "source": "driver:inns_pests_and_diseases",
+      "target": "pressure:large_mammal_herbivore_activities",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "INNS, pests and diseases -> Large mammal herbivore activities",
+      "kind": "driver_pressure",
+      "support": 3
+    },
+    {
+      "source": "driver:inns_pests_and_diseases",
+      "target": "pressure:pests_and_diseases",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "INNS, pests and diseases -> Pests and diseases",
+      "kind": "driver_pressure",
+      "support": 15
+    },
+    {
+      "source": "driver:land_and_sea_use_change",
+      "target": "pressure:access_sport_recreational_activity",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Land and sea use change -> Access, sport, recreational activity",
+      "kind": "driver_pressure",
+      "support": 9
+    },
+    {
+      "source": "driver:land_and_sea_use_change",
+      "target": "pressure:afforestation",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Land and sea use change -> Afforestation",
+      "kind": "driver_pressure",
+      "support": 15
+    },
+    {
+      "source": "driver:land_and_sea_use_change",
+      "target": "pressure:agricultural_intensification",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Land and sea use change -> Agricultural intensification",
+      "kind": "driver_pressure",
+      "support": 24
+    },
+    {
+      "source": "driver:land_and_sea_use_change",
+      "target": "pressure:built_development_and_infrastructure",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Land and sea use change -> Built development and infrastructure",
+      "kind": "driver_pressure",
+      "support": 33
+    },
+    {
+      "source": "driver:land_and_sea_use_change",
+      "target": "pressure:physical_modification_freshwater_and_coastal",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Land and sea use change -> Physical modification (freshwater and coastal)",
+      "kind": "driver_pressure",
+      "support": 12
+    },
+    {
+      "source": "driver:land_and_sea_use_change",
+      "target": "pressure:reduced_land_use_management_intensity",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Land and sea use change -> Reduced land use / management intensity",
+      "kind": "driver_pressure",
+      "support": 17
+    },
+    {
+      "source": "driver:pollution",
+      "target": "pressure:air_pollution",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Pollution -> Air pollution",
+      "kind": "driver_pressure",
+      "support": 30
+    },
+    {
+      "source": "driver:pollution",
+      "target": "pressure:land_pollution",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Pollution -> Land pollution",
+      "kind": "driver_pressure",
+      "support": 12
+    },
+    {
+      "source": "driver:pollution",
+      "target": "pressure:light_pollution",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Pollution -> Light pollution",
+      "kind": "driver_pressure",
+      "support": 9
+    },
+    {
+      "source": "driver:pollution",
+      "target": "pressure:noise_pollution",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Pollution -> Noise pollution",
+      "kind": "driver_pressure",
+      "support": 9
+    },
+    {
+      "source": "driver:pollution",
+      "target": "pressure:water_pollution",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Pollution -> Water pollution",
+      "kind": "driver_pressure",
+      "support": 24
+    },
+    {
+      "source": "pressure:access_sport_recreational_activity",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Coastal habitats are vulnerable to trampling by foot, cycling, horse riding, access by vehicles and littering (NRW, 2021). Excessive recreational pressure on dunes accelerates physical and ecological degradation (Gómez-Pina et al., 2002), resulting in the loss of diversity, impac",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:access_sport_recreational_activity",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Many pressures on the marine environment relate to unmanaged access and recreation. A NRW project (Roberts et al., 2020) focussed on marine non-licensable activities ran from 2017-2021 and identified, through engagement and consultation, recreational sea angling, recreational boa",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:access_sport_recreational_activity",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "This pressure can creates localised disturbances, changes and degradation, as well as greenhouse gas emissions associated with ancillary actions (for example transport and accommodation) (NRW, 2021). Access and recreation pressures have been recorded on heathlands. Impacts includ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:afforestation",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Historic afforestation on sand dunes has resulted in habitat loss, introduction of INNS, soil acidification, constraints to natural dynamics and species loss, resulting in poor condition of the underlying natural habitat and wider effects (such as drying, sheltering, changes to h",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:afforestation",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Afforestation and tree planting in blocks (>0.5 ha) could reduce the extent of Enclosed Farmland, impacting the amount of land available for food production. However, if tree planting is carefully planned, with the right trees in the right place for the right reason, it may impro",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:afforestation",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Historic afforestation in the uplands, particularly the planting of conifers in the post war years, included the planting of significant areas of peat soils. The planting of deep peat is no longer permitted (but note that re-stocking still occurs) but legacy issues associated wit",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:afforestation",
+      "target": "state:semi_natural_grassland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Grassland habitats are under threat of loss to afforestation where this is either: insufficiently controlled through regulation, adherence to the UK Forestry Standards, conditions associated with grant funding and available guidance; is permitted in accordance with the current fr",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:afforestation",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Afforestation causes changes in the soil environment, including soil pH, soil structure, nutrient cycling, microbial activity, soil bulk density and carbon storage. It may also influence hydrogeological processes. Some of these changes can be positive, but negative impacts can al",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:agricultural_intensification",
+      "target": "state:air",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Agricultural intensification can increase the risk of pollution (as described in air pollution pressure). Agriculture is a source of air pollutants and emits high levels of methane and ammonia from manure spreading and livestock housing. (See SoNaRR 2025 Land use and management c",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:agricultural_intensification",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Coastal habitats affected: Primarily sea cliffs, saltmarsh and sand dunes. Agricultural intensification has led to habitat loss, fragmentation and declines in condition and biodiversity. Much of this is historic, including conversion of coastal heathlands and grasslands to more a",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:agricultural_intensification",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "As reported in SoNaRR 2020, since the end of the Second World War, levels of agricultural production have increased greatly. Semi-natural habitats were cultivated, drained, limed and fertilised to create more productive land (Blackstock et al., 2010). Extensively managed arable l",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:agricultural_intensification",
+      "target": "state:freshwater",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Intensification of agriculture can result in increased land drainage, soil compaction, loss of riparian corridor habitat, erosion and pollution to watercourses (including sediment, nutrients, organic matter, ammonia, litter, pesticides, pharmaceuticals, bacteria and viruses). The",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:agricultural_intensification",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Agricultural intensification can cause the simplification of the ecosystem for singular productive use, but general loss of biodiversity and ecosystems services such as carbon sequestration and water regulation. It may affect soil and hydrological properties, aesthetics and other",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:agricultural_intensification",
+      "target": "state:semi_natural_grassland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Agricultural intensification was the principal cause of the massive decline in extent of semi-natural grassland in the UK in the latter part of the 20th century, including a greater than 90% loss of the habitat in Wales (NRW, 2021). Along with climate change, it has been identifi",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:agricultural_intensification",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Simplifying an ecosystem for a single productive use can lead to a general loss of biodiversity. This may have implications on soil characteristics, hydrological properties, aesthetic value, and other potential uses of the land. Certain activities, such as maintaining a high live",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:agricultural_intensification",
+      "target": "state:water",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Intensive agriculture, and associated poor practice, can result in sediment, nutrients, organic matter, ammonia, litter, pesticides, pharmaceuticals, bacteria, viruses and antimicrobial resistance affecting surface water and groundwater. Soil compaction which may be caused by inc",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:air_pollution",
+      "target": "state:air",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "[2005-2022] [Mixed picture] Most emissions to air were lower in 2022 than they were in 2005. Emissions of sulphur dioxide (SO2) have reduced the most, with more modest declines for nitrogen oxides (NOX), lead (Pb), volatile organic compounds (VOCs), PM10, and PM2.5. Emissions of ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:air_pollution",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Vegetation communities within coastal habitats are highly sensitive to nitrogen deposition (Pakeman et al., 2016) with the exception of saltmarsh which is less sensitive than some of the other coastal habitats. Dune habitats and coastal heath which are adapted to nutrient poor co",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:air_pollution",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Emissions of ammonia and nitrogen oxides lead to nitrogen deposition, which can lead to nutrient enrichment of the vegetation and soils of the enclosed farmland ecosystem. These changes impair plant health, alter vegetation structure and community composition, and can modify carb",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:air_pollution",
+      "target": "state:freshwater",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Deposition of certain air pollutants can have an impact on water bodies. This can include nitrogen oxides and ammonia, resulting in increased nutrient levels in water bodies which may lead to eutrophication. Sulphur dioxide, nitrogen oxides and ammonia can lead to reduction in pH",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:air_pollution",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Atmospheric nitrogen deposition benefits nitrophilous species, poses direct toxicity effects on some species, and causes reductions in plant species richness and changes to vegetation structure which may enhance carbon loss.",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:air_pollution",
+      "target": "state:semi_natural_grassland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Atmospheric pollution, from nitrogen oxides and ammonia, causes increased soil nutrient levels and acidification of grassland. It was considered one of the principal threats to semi-natural grasslands in SoNaRR 2020 (NRW, 2021).",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:air_pollution",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Addressing air pollution’s impact on soil health is crucial for maintaining sustainable ecosystems and safeguarding our environment. Trends in the impacts on soils from air pollution are directly linked to levels of pollutants emitted at a range of spatial scales, locally, region",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:air_pollution",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Air pollution which can damage human health and urban habitats includes gases and small particles. The latter may also contain toxic metals. Oxides of Nitrogen, NOx (including NO2), have direct impacts on human health, causing respiratory and cardiovascular effects . NO2 also rea",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:air_pollution",
+      "target": "state:water",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Deposition of certain air pollutants can have an impact on water bodies. This can include nitrogen oxides and ammonia, resulting in increased nutrient levels in water bodies and may lead to eutrophication. Sulphur dioxide, nitrogen oxides and ammonia can lead to reduction in pH l",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:air_pollution",
+      "target": "state:woodlands",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Air pollution, particularly nitrogen, can cause changes to woodland flora composition due to nutrient enrichment . Sulphur deposition has reduced (Smart et al., 2024) and soil pH is increasing (i.e. becoming less acidic). This increasing pH, however, has a less mediating effect o",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:air",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Built development and infrastructure introduces new sources of emissions, for example traffic, domestic combustion, and industrial development. Conversion of grassland to settlements was a main source of Greenhouse Gas emissions in the Land use, Land use change, and forestry sect",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Coastal habitats affected: Primarily sand dunes with built development and to a lesser extent sea cliffs and shingle. In relation to marine industries: sand dunes, saltmarsh, sea cliffs and shingle are most at risk of impacts. Built development pressures on coastal habitats inclu",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "A significant proportion of the built-up area in Wales has developed on what was high-grade agricultural land which relates to enclosed farmland (grades 1, 2 and 3a). Due to the co-location of urban areas and high-grade soils, any urban expansion has often been at the expense of ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:freshwater",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Built development and infrastructure can cause: increased flood risk; increased risk of pollution (such as, increased sewage load); loss of habitats and species due to physical damage to freshwaters (e.g. loss of riparian corridor, cultivation and development up to water’s edge, ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Built development in the marine environment can lead to loss or degradation of marine habitats through removal of habitat directly within the footprint of infrastructure, or as a result of changes to physical processes e.g. currents, sediment deposition and scour, due to the plac",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "This pressure refers to the construction of windfarms on mountain, moorland and heath, specifically blanket bog in the uplands. Wind-power generation poses two immediate pressures; loss of habitat beneath the footprint of infrastructure (including turbine footings, crane pads, tr",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:semi_natural_grassland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Areas of semi-natural grassland outside the statutory site network are locally at greatly increased risk from land development, including new roads, quarrying and housing, as well as power generation infrastructure.",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Development on soil can lead to irreversible changes, sealing the surface and causing soil waste. Despite only 5.97% of Wales being classified as urban, there is a continuous need for housing and infrastructure, including energy generation. All soil types are vulnerable, due to l",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.5,
+      "provenance": "In 2021 the total area of Wales was 2,121,869 ha of which 126,745 ha, or 5.97%, was classified as urban. Between 1990 and 2021 the area of land classified as urban increased by 76,254 ha, or 3.59% of the total area of Wales. Enclosed farmland was the habitat which saw the greates",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:water",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Urban areas can increase the risk of water pollution, for example rainwater running over hard surfaces, such as roads and driveways, can carry pollutants into surface waters and groundwaters. Road runoff can be a source of pollutants, for example polyaromatic hydrocarbons, metals",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:built_development_and_infrastructure",
+      "target": "state:woodlands",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Built development and infrastructure, including housing, roads and renewable energy provision, can result in the direct and permanent loss of woodland cover. Authorised and permitted development, such as under Town & Country Planning legislation or Environmental Impact Assessment",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_air_temperature_includes_rainfall_trends",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Increases in air temperature, will lead to more extreme drought conditions and changes in species composition of coastal habitats. (Burden et al., 2020) Sand dune habitats and species are adapted to drought conditions, however, premature desiccation of dune slacks and earlier gro",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_air_temperature_includes_rainfall_trends",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Changes in mean air temperature (and seasonal rainfall patterns) will cause a range of effects which will have direct and indirect impacts on enclosed farmland across Wales. The effects will include temperature changes, altered hydrology, seasonal aridity and wetness on soils, ch",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_air_temperature_includes_rainfall_trends",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "The frequency of discrete periods of regional extreme air temperatures has increased over the last couple of decades, and caused what are known as marine heatwaves (Tinker et al., 2020). Marine heatwaves are defined as a period when SSTs exceed the local 99th percentile and occur",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_air_temperature_includes_rainfall_trends",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "A rise in temperature may alter the bio-climatic envelope for many species and their associated habitat. This will be particularly relevant to high altitude habitats, especially montane grasslands and heaths. Many arctic-alpine species have a minimum altitude where the species is",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_air_temperature_includes_rainfall_trends",
+      "target": "state:semi_natural_grassland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Climate change is altering the timing and performance of plant reproduction and much of this is due to changes in air temperature, which affect the phenology of grassland plant species with knock-on effects on other species, particularly invertebrates.",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_air_temperature_includes_rainfall_trends",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Urban heat islands (where built up areas become much hotter than their surroundings) will happen more frequently, and adversely affect green space and urban trees – which will both be desperately needed to cast shade and cool the air. In combination with strong summer sunshine th",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_air_temperature_includes_rainfall_trends",
+      "target": "state:woodlands",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Climate change is altering the stable weather patterns in which Wales’s woodlands evolved. Changes in mean air temperature (and seasonal rainfall patterns) will cause a range of effects in all regions of Wales in all seasons, as discussed in SoNaRR 2016 (NRW, 2016) and SoNaRR2020",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Climate change is predicted to lead to the loss in extent and fragmentation of ecosystems from increased storminess leading to higher rates of erosion, increased flooding and storm damage. Changes in rainfall and riverine discharges can also lead to negative impacts as will highe",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "An increase in the intensity and frequency of weather events such as prolonged dry weather, drought, heavy precipitation, storms, strong winds and flooding, will cause a range of effects including fire, soil erosion and compaction, which will have direct and indirect impacts on t",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "target": "state:freshwater",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Freshwater ecosystems are particularly sensitive to changes in weather events. Low and high flows and increased temperatures influence ecosystem processes, increase pressures and reduce resilience. Many rivers and lakes have been modified in the past and this makes the effects of",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "The effects of changes in intensity and frequency of weather events which are particularly relevant to marine ecosystems include increased wave exposure and increased precipitation. This could increase risk to people, properties, infrastructure and agricultural land, as well as c",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Droughts and floods will become more common. Habitats that are dependent on high or intermittently high water tables are likely to suffer disproportionately. These impacts are likely to be most significant on peat soils and shallower organic soils which are prone to desiccation, ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "target": "state:semi_natural_grassland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Increases in periods of dry weather or drought, or very wet weather, impact grassland ecosystems in a variety of ways, either through direct effects or by promoting damaging land use and land management changes. At a UK scale, climate change has been found to be the second most i",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Changes in rainfall distribution and intensity can alter soil chemistry and biology, with prolonged heat and drought potentially leading to crop yield impacts. Soil ecosystem health may decline due to these changes, affecting dependent habitats and ecosystems. High carbon soils l",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "People will be put at high risk from the impacts of severe weather events such as flooding, damage to buildings, power outages and heatwaves. Increased rainfall will increase the flood risk from heavily modified rivers in urban and peri urban areas (Caretta et al., 2022) e.g. by ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "target": "state:water",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Changes to intensity and frequency of rainfall increases the risks of droughts and flooding, which will lead to changes in our water systems, directly impacting the quality and quantity of water. Changing rainfall patterns could lead to higher or lower river flows, reservoir, lak",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_intensity_and_frequency_of_weather_events",
+      "target": "state:woodlands",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Climate change is altering the stable weather patterns in which Wales’s woodlands evolved. An increase in the intensity and frequency of weather events, will cause a range of effects, as discussed in SoNaRR (2016) and SoNaRR2020 (NRW, 2021). In summary these include: Increased ri",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_water_temperature",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Coastal habitats affected: Primarily saltmarsh, sand dune and coastal lagoons. Saltmarsh habitat has been identified as being vulnerable to increases in water temperature (Oaten et al., 2021). Dune slacks are important breeding habitats for a variety of invertebrates and amphibia",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_water_temperature",
+      "target": "state:freshwater",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Higher water temperatures can have serious negative consequences for freshwaters. This ranges from the direct impact of lethal temperatures killing freshwater animals and plants to indirect impacts due to reductions in dissolved oxygen (Crozier and Hutchings, 2014) as well as the",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_water_temperature",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Changes in water temperature directly leads to a decrease in dissolved oxygen and increases in stratification (separation of water into layers by density). In marine environments, the amount of sinking cold water is decreasing in warming ocean waters, which could slow down or, in",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:changes_in_water_temperature",
+      "target": "state:water",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Higher temperatures could increase rates of biological and chemical processing, but conversely there could be increases in toxicity (Sheahan, 2021; Bolan et al., 2024). There may also be higher incidences of algal blooms associated with higher water temperatures, especially when ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:drainage",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "This pressure is particularly problematic for and relevant to peatlands, where drainage causes: habitat change, changes to the hydrological system, erosion, increased run-off, and increased greenhouse gas emissions. Grazing livestock losses also occur in drainage ditches.",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:drainage",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Loss of carbon and habitat deterioration from drained/ drought soils, more surface run-off and erosion. Greenhouse gas (GHG) emissions from drained peatland. Soils of wetland habitats, such as peat bogs and fens, are particularly sensitive to changes in soil wetness; the degraded",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:fisheries",
+      "target": "state:freshwater",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Historically humans have exploited stocks of migratory fish species in the rivers and estuaries of Wales, most notably salmon, sea trout and eels. Sustainable fisheries benefit society economically and socially. However, if too many fish are removed from a population this will re",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:fisheries",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Marine fisheries (the capture of wild fish or shellfish) can affect target species and non-target species through bycatch, prey depletion and disturbance , and the wider marine ecosystem through habitat interactions. However, the evidence to determine whether marine fisheries in ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:inns",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "INNS outcompete or predate native species, affecting their abundance and diversity. INNS which are adapted to coastal environments for example, Sea buckthorn which is non-native in Wales (NRW, 2021b), threaten habitat extent, condition and diversity, and coastal geomorphology. In",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:inns",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Over the last century the introduction of non-native species has been largely driven by human activities. Invasion trends and trends in human socio-economic activities (for example increasing trade, and increasing land use/cropland) are closely correlated (Roy et al., 2023). INNS",
+      "kind": "pressure_state",
+      "support": 1
+    },
+    {
+      "source": "pressure:inns",
+      "target": "state:freshwater",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "INNS introduce pests and diseases and outcompete or predate native species affecting their abundance and diversity in freshwater ecosystems. INNS cause structural instability in river banks, can increase localised flood risk by blocking channels, and interfere with navigation and",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:inns",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Invasive Non-Native Species (INNS) can impact on biodiversity and ecosystem resilience through competition with native species, predation, disease, altering structure of ecosystems, genetic impacts such as hybridisation, spreading disease or interfering with the genetic integrity",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:inns",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Invasive non-native species (INNS) in mountain, moorland and heath can threaten the condition, extent, connectivity and diversity of the ecosystem, and ecosystem service delivery. Significant INNS include rhododendron and some conifers (such as Sitka spruce and western hemlock) o",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:inns",
+      "target": "state:semi_natural_grassland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Semi-natural grasslands can be negatively impacted by a range of invasive non-native species. These include non-native cotoneaster in calcareous grassland and Himalayan balsam in wet grasslands, both of which can smother native vegetation and lead to lower species diversity. Ligh",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:inns",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Invasive, Non-Native Species (INNS) can have a significant impact on well-being by affecting recreational activities, exacerbating flooding and affecting overall human health (Pejchar and Mooney, 2009; Ebi, Frumkin and Hess, 2017; Kumar Rai and Singh, 2020). They may also affect ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:inns",
+      "target": "state:woodlands",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "INNS can negatively impact the condition and function of woodlands. INNS in woodlands include grey squirrel, Rhododendron ponticum, American skunk cabbage, Himalayan balsam, Cherry laurel and Japanese knotweed. Two deer species (Sika and Muntjac) present in Wales are also non-nat",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:land_pollution",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "An NRW Report by Robbins et al., (2023) investigated the potential impacts on Marine Protected Area features from landfill sites found that there are over 1,500 individual landfill sites recorded in Wales, classed as operational, closed or historic. Many of these are located at t",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:land_pollution",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Land pollution disrupts soil condition and introduces harmful substances, leading to various ecological consequences including soil degradation and impacts on animals and plants (discussed in further detail in the SoNaRR 2025 Soil assessment). Inputs such as fertilisers (organic ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:land_pollution",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Land pollution disrupts soil condition and introduces harmful substances, leading to various ecological consequences including: ---Soil Degradation: Contaminants, such as heavy metals, pesticides, and hydrocarbons, alter soil properties; Soil structure, texture, and nutrient avai",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:land_pollution",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Land contaminated by toxic substances may directly harm both animal and plant life. Where toxic substances accumulate in soil, these may affect soil-dwelling organisms, insects, and small mammals. Plant roots can absorb pollutants, leading to reduced growth, altered physiology, a",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:large_mammal_herbivore_activities",
+      "target": "state:woodlands",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Herbivores, both domestic and wild, can negatively affect woodlands as a result of browsing and grazing. Grazing can be beneficial to woodlands, but the type and level of grazing is important to improve condition. Overgrazing can have a significant effect on the ground flora of w",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:light_pollution",
+      "target": "state:air",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Light pollution is caused by artificial light at night (ALAN) in areas where it is not wanted, is excessive or inappropriate to context. Light pollution can impact our visual, amenity and experiential services from landscapes and greenspaces and the cultural and economic benefits",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:light_pollution",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Light pollution is increasingly recognised as an important pressure on biodiversity, affecting both individual species and the functioning of ecosystems across terrestrial, freshwater and marine environments (for example, (Hirt et al., 2023)). Light pollution is known to be rapid",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:light_pollution",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Exposure to excess artificial light, especially at night (ALAN), has been associated with serious disease in humans, but because light pollution is often associated with confounding factors like air pollution it has been difficult to isolate its effects. However, there is evidenc",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:noise_pollution",
+      "target": "state:air",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Excessive noise seriously harms health and interferes with daily activities at school, work, home and during leisure time. It can disturb sleep, cause cardiovascular and psychophysiological effects, reduce performance and provoke annoyance responses and changes in social behaviou",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:noise_pollution",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Underwater noise is a widespread pressure in the marine environment resulting from a range of human activities (Tasker et al., 2010; Merchant et al., 2016; Merchant, Kinneging and Liebschner, 2022). Loud pulsed sound (impulsive noise) from activities such as seismic surveys and p",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:noise_pollution",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "The Welsh Government state: “Noise, meaning unwanted or harmful sound, can disrupt sleep and increase stress, irritation and fatigue, as well as interfering with important activities such as learning, working and relaxing. It reduces people’s quality of life. Exposure to loud sou",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:non_efficient_use",
+      "target": "state:water",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Efficient use of water will become ever more necessary as climate change scenarios predict an increasing frequency of prolonged dry periods. Conservation and re-use of water across all sectors is vital to increase climate change resilience and water security. Reliability of abstr",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:ocean_acidification",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Ocean acidification is when the acidity of seawater is increased (primarily) by increasing carbon dioxide levels. Ocean acidification can influence marine species in a number of ways, including direct impacts on internal physiology from the changes in pH and pCO2 (amount of carbo",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:pests_and_diseases",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Diseases in sand dune rabbit populations: Rabbits are a keystone species of coastal sand dunes and are important grazers and habitat engineers maintaining sand dune habitats and dynamic conditions. However, Myxomatosis and Rabbit Haemorrhagic Disease (RHD) are still prevalent in ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:pests_and_diseases",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Pests and diseases have direct and indirect impacts on enclosed farmland, including effects on species composition, crop yields, livestock health, and tree health. Simplification of the farmed landscape and over-reliance on crop monocultures, a limited number of crop varieties as",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:pests_and_diseases",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "There has been a recent mass mortality of seabirds in the UK and Wales in 2022 and 2023 caused by Highly Pathogenic Avian Influenza (HPAI). The results of recent surveys demonstrate the need to take HPAI into account as a new and major threat to internationally important seabird ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:pests_and_diseases",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Climate change is predicted to increase the abundance and distribution of tree pests, as well as causing greater stress on trees growing in the already stressful urban environment, leaving them even more vulnerable to attack. Global trade also increases the risks of importation o",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:pests_and_diseases",
+      "target": "state:woodlands",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Pests and diseases cause declining tree health. Tree health is a key determinant of the growth, composition and productivity of our woodlands. Pests and diseases are already having a significant impact on woodlands in Wales, at a species and woodland level ((NRW, 2016, 2021)). Cl",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:physical_modification_freshwater_and_coastal",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "For more on physical modifications, refer to SoNaRR 2025 Water natural resource evidence. Physical modifications are changes made by people , estuaries and coastal waters. These changes can include the construction of artificial structures such as flood defences which in turn mod",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:physical_modification_freshwater_and_coastal",
+      "target": "state:freshwater",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Physical modifications have a detrimental effect on river and lake processes and overall ecosystem functioning and thus reduce ecosystem resilience to other pressures. Impacts range from direct loss of habitat due to physical damage to freshwaters (e.g. dredging, channel straight",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:physical_modification_freshwater_and_coastal",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Marine and coastal physical modifications include flood defences, groynes, and sediment supply (dredging and disposal). According to the NRW Evidence Report ‘Understanding the likely scale of deterioration of Marine Protected Area (MPA) features due to coastal squeeze’ (Oaten, Fi",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:physical_modification_freshwater_and_coastal",
+      "target": "state:water",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Physical modifications have a detrimental effect on river and lake processes and overall ecosystem functioning and thus reduce ecosystem resilience to other pressures. Impacts range from direct loss of habitat due to physical damage to freshwaters (e.g. dredging, channel straight",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:reduced_land_use_management_intensity",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Many coastal vegetation communities are dependent on appropriate grazing levels to maintain good condition. When historically grazed coastal habitats are abandoned or under-grazed, dense, coarse vegetation can build up, out-competing other plant species and impacting habitat cond",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:reduced_land_use_management_intensity",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Livestock grazing is essential to maintain the structure and floristic composition of many MMH habitats, particularly against the current backdrop of atmospheric nitrogen deposition. However, too much or too little grazing or grazing at the wrong time of year with unsuitable live",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:reduced_land_use_management_intensity",
+      "target": "state:semi_natural_grassland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Insufficient management (particularly grazing) of semi-natural grassland inevitably results in lower species diversity and decline in condition. Complete abandonment of grassland typically results, eventually, in loss of that grassland to scrub or secondary woodland.",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:reduced_land_use_management_intensity",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Reduction in land use or management intensity can affect soils in different ways depending on the land use and the level of reduction in management intensity. Changes in management may cause changes in soil pH, biodiversity, erosion, fertility, structure, and carbon storage. Land",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:reduced_land_use_management_intensity",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Urban green spaces require continual management if they are to remain attractive for human use (Commission for Architecture and the Built Environment, 2004) and therefore provide the physical and mental well-being benefits associated with green space use (World Health Organizatio",
+      "kind": "pressure_state",
+      "support": 2
+    },
+    {
+      "source": "pressure:reduced_land_use_management_intensity",
+      "target": "state:woodlands",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Woodlands not in planned management are likely to deliver fewer ecosystem services than they perhaps could; and their condition may decline over time, further reducing ecosystem service provision. An evidence review of the issues around the management of undermanaged woodland is ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:sea_level_rise",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Climate change projections show increasing sea-level rise, which we expect to lead to some major changes to these dynamic habitats on the Welsh coast in the next 10 to 20 years and beyond (NRW, 2021). “Sea-level rise and erosion rates are the greatest risk to coastal habitats. Se",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:sea_level_rise",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Wales’ extensive coastline faces risks from coastal flooding, coastal erosion and saline intrusion which can affect areas of enclosed farmland. Key contributing factors to coastal flood, coastal erosion and saline intrusion risk include storm surges, sea level rise, tidal pattern",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:sea_level_rise",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Sea level rise entails increased risk to people, properties, infrastructure and agricultural land, as well as coastal, terrestrial and freshwater habitats (NRW, 2021). it is likely to lead to changes in species composition and habitat distribution in the shallow subtidal / intert",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:sea_level_rise",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Sea level rise caused by climate change, along with a higher incidence of storms, increases the risk of erosion, flooding and flooding of coastal communities (Met Office, 2018). There is an increased risk for land lost to sea level rise as well as soils at risk from salinisation ",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:sea_level_rise",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Sea level rise will increase the risk of flooding in Wales . This will cause increased risk to people, properties, and infrastructure. Because half of sea level rise is caused by thermal expansion, we can expect that increases in ocean temperature will add to rising sea levels al",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:sea_level_rise",
+      "target": "state:water",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Sea level rise will result in coastal areas becoming increasingly vulnerable to flooding and saline intrusion. These impacts will affect communities, infrastructure, agricultural land, coastal habitats, species and heritage sites located along the coastline as well as land loss a",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_abstraction_and_demand",
+      "target": "state:freshwater",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Over-abstraction of water resources, the process of taking more water out of a river system than can be replenished naturally, often leads to water scarcity, reduced or intermittent river flows, lowered lake and groundwater levels, the drying up of wetlands, and reductions in wat",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_abstraction_and_demand",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Water demand is influenced by atmospheric, climatic, and land use factors, and is increased by climate change. Soil water capacity varies with soil type and texture across Wales. Land use, especially agriculture, increases water demand, with crops like maize and wheat requiring s",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_abstraction_and_demand",
+      "target": "state:water",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Water is abstracted from surface waters, for example rivers or lakes, and from groundwater. This is used for household water supplies, agriculture, amenities, crown estates, industry and the environment. An abstraction licence is required if water is taken from an inland water or",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_pollution",
+      "target": "state:coastal_margins",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "In the marine environment contaminants originate from sources such as industry, sewage, waste and transport entering the sea. Nutrient levels are affected by sources such as sewage and agriculture. Elevated nutrient levels and chemical contaminants are detrimental to the conditio",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_pollution",
+      "target": "state:enclosed_farmland",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Water pollution is a threat to agricultural productivity. Poor water quality can negatively affect crop, animal and soil productivity (Okorogbona et al., 2018). Water plays a crucial role in agriculture, horticulture and livestock management in enclosed farmland. Access to reliab",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_pollution",
+      "target": "state:freshwater",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Excessive nutrient and sediment loadings in rivers and lakes disrupts ecological processes. Pollution of freshwaters by metals, plastics and anthropogenic compounds (e.g. PFAS and PBDEs) can bioaccumulate in the food chain to toxic concentrations.",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_pollution",
+      "target": "state:marine",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Elevated nutrients (nitrogen and phosphorus) can lead to increased algal growth and impacts such as reduced dissolved oxygen, changes to community composition and fish mortality in a process known as eutrophication (NRW, 2021). Chemical contaminants including metals can be releas",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_pollution",
+      "target": "state:mountain_moorland_and_heath",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Water pollution can lead to profusion of nitrophilous species, reduction in plant species richness and changes to vegetation structure which may increase carbon loss in peatlands. The usual source of diffuse water pollution is agricultural run-off, particularly where peatlands ar",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_pollution",
+      "target": "state:soil",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Water pollution can affect soil in many ways, primarily by introducing substances (heavy metals, chemicals, excess nutrients, particles etc.) that interfere with and disrupt natural soil processes. The effect on soils will depend on how the water is polluted, but there could be c",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_pollution",
+      "target": "state:urban",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.9,
+      "provenance": "Urban areas can increase the risk of water pollution. Rainwater running over hard surfaces, such as roads and driveways, can carry pollutants into surface waters and groundwaters. Chemicals from land affected by historic contamination and industrial land uses (for example landfil",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "pressure:water_pollution",
+      "target": "state:water",
+      "sign": -1,
+      "weight": 0.5,
+      "confidence": 0.3,
+      "provenance": "Water pollution in Wales involves a number of different contaminants, including: nutrients, metals, other chemicals, contaminants of emerging concern, bacteriological and antimicrobial contaminants. Nutrient pollution: happens when nitrogen and phosphorous enter our waters. Nutri",
+      "kind": "pressure_state",
+      "support": 3
+    },
+    {
+      "source": "state:coastal_margins",
+      "target": "service:cultural",
+      "sign": 1,
+      "weight": 0.8,
+      "confidence": 0.6,
+      "provenance": "Coastal margins -> Cultural services",
+      "kind": "state_service",
+      "support": 4
+    },
+    {
+      "source": "state:coastal_margins",
+      "target": "service:provisioning",
+      "sign": 1,
+      "weight": 0.3,
+      "confidence": 0.6,
+      "provenance": "Coastal margins -> Provisioning services",
+      "kind": "state_service",
+      "support": 7
+    },
+    {
+      "source": "state:coastal_margins",
+      "target": "service:regulating",
+      "sign": 1,
+      "weight": 0.65,
+      "confidence": 0.6,
+      "provenance": "Coastal margins -> Regulating and maintenance services",
+      "kind": "state_service",
+      "support": 9
+    },
+    {
+      "source": "state:enclosed_farmland",
+      "target": "service:cultural",
+      "sign": 1,
+      "weight": 0.65,
+      "confidence": 0.6,
+      "provenance": "Enclosed farmland -> Cultural services",
+      "kind": "state_service",
+      "support": 4
+    },
+    {
+      "source": "state:enclosed_farmland",
+      "target": "service:provisioning",
+      "sign": 1,
+      "weight": 0.8,
+      "confidence": 0.6,
+      "provenance": "Enclosed farmland -> Provisioning services",
+      "kind": "state_service",
+      "support": 6
+    },
+    {
+      "source": "state:enclosed_farmland",
+      "target": "service:regulating",
+      "sign": 1,
+      "weight": 0.3,
+      "confidence": 0.6,
+      "provenance": "Enclosed farmland -> Regulating and maintenance services",
+      "kind": "state_service",
+      "support": 11
+    },
+    {
+      "source": "state:freshwater",
+      "target": "service:cultural",
+      "sign": 1,
+      "weight": 0.8,
+      "confidence": 0.6,
+      "provenance": "Freshwater -> Cultural services",
+      "kind": "state_service",
+      "support": 4
+    },
+    {
+      "source": "state:freshwater",
+      "target": "service:provisioning",
+      "sign": 1,
+      "weight": 0.3,
+      "confidence": 0.6,
+      "provenance": "Freshwater -> Provisioning services",
+      "kind": "state_service",
+      "support": 9
+    },
+    {
+      "source": "state:freshwater",
+      "target": "service:regulating",
+      "sign": 1,
+      "weight": 0.3,
+      "confidence": 0.6,
+      "provenance": "Freshwater -> Regulating and maintenance services",
+      "kind": "state_service",
+      "support": 14
+    },
+    {
+      "source": "state:marine",
+      "target": "service:cultural",
+      "sign": 1,
+      "weight": 0.8,
+      "confidence": 0.6,
+      "provenance": "Marine -> Cultural services",
+      "kind": "state_service",
+      "support": 4
+    },
+    {
+      "source": "state:marine",
+      "target": "service:provisioning",
+      "sign": 1,
+      "weight": 0.3,
+      "confidence": 0.6,
+      "provenance": "Marine -> Provisioning services",
+      "kind": "state_service",
+      "support": 5
+    },
+    {
+      "source": "state:marine",
+      "target": "service:regulating",
+      "sign": 1,
+      "weight": 0.65,
+      "confidence": 0.6,
+      "provenance": "Marine -> Regulating and maintenance services",
+      "kind": "state_service",
+      "support": 5
+    },
+    {
+      "source": "state:mountain_moorland_and_heath",
+      "target": "service:cultural",
+      "sign": 1,
+      "weight": 0.8,
+      "confidence": 0.6,
+      "provenance": "Mountain, moorland and heath -> Cultural services",
+      "kind": "state_service",
+      "support": 4
+    },
+    {
+      "source": "state:mountain_moorland_and_heath",
+      "target": "service:provisioning",
+      "sign": 1,
+      "weight": 0.65,
+      "confidence": 0.6,
+      "provenance": "Mountain, moorland and heath -> Provisioning services",
+      "kind": "state_service",
+      "support": 5
+    },
+    {
+      "source": "state:mountain_moorland_and_heath",
+      "target": "service:regulating",
+      "sign": 1,
+      "weight": 0.5,
+      "confidence": 0.6,
+      "provenance": "Mountain, moorland and heath -> Regulating and maintenance services",
+      "kind": "state_service",
+      "support": 10
+    },
+    {
+      "source": "state:semi_natural_grassland",
+      "target": "service:cultural",
+      "sign": 1,
+      "weight": 0.8,
+      "confidence": 0.6,
+      "provenance": "Semi-natural grassland -> Cultural services",
+      "kind": "state_service",
+      "support": 4
+    },
+    {
+      "source": "state:semi_natural_grassland",
+      "target": "service:provisioning",
+      "sign": 1,
+      "weight": 0.65,
+      "confidence": 0.6,
+      "provenance": "Semi-natural grassland -> Provisioning services",
+      "kind": "state_service",
+      "support": 6
+    },
+    {
+      "source": "state:semi_natural_grassland",
+      "target": "service:regulating",
+      "sign": 1,
+      "weight": 0.3,
+      "confidence": 0.6,
+      "provenance": "Semi-natural grassland -> Regulating and maintenance services",
+      "kind": "state_service",
+      "support": 10
+    },
+    {
+      "source": "state:urban",
+      "target": "service:cultural",
+      "sign": 1,
+      "weight": 0.8,
+      "confidence": 0.6,
+      "provenance": "Urban -> Cultural services",
+      "kind": "state_service",
+      "support": 4
+    },
+    {
+      "source": "state:urban",
+      "target": "service:provisioning",
+      "sign": 1,
+      "weight": 0.3,
+      "confidence": 0.6,
+      "provenance": "Urban -> Provisioning services",
+      "kind": "state_service",
+      "support": 5
+    },
+    {
+      "source": "state:urban",
+      "target": "service:regulating",
+      "sign": 1,
+      "weight": 0.8,
+      "confidence": 0.6,
+      "provenance": "Urban -> Regulating and maintenance services",
+      "kind": "state_service",
+      "support": 9
+    },
+    {
+      "source": "state:woodlands",
+      "target": "service:cultural",
+      "sign": 1,
+      "weight": 0.8,
+      "confidence": 0.9,
+      "provenance": "Woodlands -> Cultural services",
+      "kind": "state_service",
+      "support": 4
+    },
+    {
+      "source": "state:woodlands",
+      "target": "service:provisioning",
+      "sign": 1,
+      "weight": 0.4,
+      "confidence": 0.6,
+      "provenance": "Woodlands -> Provisioning services",
+      "kind": "state_service",
+      "support": 5
+    },
+    {
+      "source": "state:woodlands",
+      "target": "service:regulating",
+      "sign": 1,
+      "weight": 0.8,
+      "confidence": 0.9,
+      "provenance": "Woodlands -> Regulating and maintenance services",
+      "kind": "state_service",
+      "support": 11
+    }
+  ]
+}
