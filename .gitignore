@@ -19,3 +19,6 @@ __pycache__/
 # repo). Download from the NRW SoNaRR 2025 portal to re-run extract_graph.py.
 SoNaRR2025 Portal*.xlsx
 ~$*.xlsx
+
+# Word deliverables (local; the markdown version lives in docs/)
+*.docx
