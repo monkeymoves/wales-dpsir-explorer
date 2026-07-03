@@ -154,6 +154,8 @@ button.ghost:hover { border-color: var(--state); color: var(--state); background
 .advanced-hidden { display: none; }
 
 /* ---------- state bars ---------- */
+.bar-group { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; color: var(--state); margin: 4px 0 10px; }
+.bar-group:not(:first-child) { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 14px; }
 .bar { margin-bottom: 13px; padding-left: 11px; border-left: 3px solid transparent; transition: border-color .25s; }
 .bar.mover { border-left-color: var(--state); }
 .bar.mover .blbl span:first-child { color: var(--ink); font-weight: 700; }

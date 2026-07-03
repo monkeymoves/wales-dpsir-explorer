@@ -64,7 +64,7 @@
       subtitle: "Built from SoNaRR 2025 (Natural Resources Wales) - DPSIR + Fuzzy Cognitive Map - a thinking tool, not a forecast - prototype",
       headline: "pressures assessed as deteriorating",
       levers: "Levers", "levers-hint": "Drag a driver or pressure. The model settles to a new state. Baseline is marked.",
-      actions: "Actions", "actions-hint": "Turn up an action. The model settles to a new state; the graph shows the cascade.",
+      actions: "Actions", "actions-hint": "0% = do nothing; 100% = that pressure fully relieved. It's the degree of action, not a cost, plan or feasibility.",
       "show-advanced": "Show all parameters (advanced)", "hide-advanced": "Hide advanced parameters",
       reset: "Reset to baseline", share: "Copy share link",
       inspect: "Inspect a causal link", confidence: "SoNaRR confidence:", strength: "How strong is this link?",
@@ -72,8 +72,9 @@
       "show-expert": "Adjust this link (expert)", "hide-expert": "Hide expert controls",
       "expert-note": "SoNaRR says the link exists but not how strong it is. Set your own view and see the effect. This does not change SoNaRR's evidence above.",
       "fan-note": "Green bar = likely outcome given your view. Shaded band = uncertainty from SoNaRR's confidence (wider = less certain). Dashed line = SoNaRR baseline.",
-      outcomes: "State of Wales (model output)", "outcomes-hint": "Higher = better. Marker = baseline; shaded band = uncertainty from SoNaRR confidence.",
-      leverage: "Leverage: where to act", "leverage-hint": "If this single pressure/driver were relieved, total gain across all states. Recomputed live.",
+      outcomes: "State of Wales (model output)", "outcomes-hint": "A relative condition index (0-100, not a percentage), anchored to SoNaRR. Marker = baseline; band = uncertainty. Compare movements to each other.",
+      "grp-ecosystems": "Ecosystems", "grp-resources": "Natural resources",
+      leverage: "Leverage: where to act", "leverage-hint": "Average condition gain per ecosystem/resource if this one lever were fully relieved. A ranking - compare the bars, not the exact figure.",
       "graph-hint": "Click a node or link to inspect. Scroll to zoom, drag to pan.",
       "k-driver": "Driver", "k-pressure": "Pressure", "k-state": "Ecosystem / resource state", "k-service": "Ecosystem service",
       drivers_h: "Direct drivers", pressures_h: "Key pressures",
@@ -85,7 +86,7 @@
       subtitle: "O SoNaRR 2025 (Cyfoeth Naturiol Cymru) - DPSIR + Map Gwybyddol Aneglur - teclyn meddwl, nid rhagolwg - prototeip",
       headline: "o bwysau yn dirywio",
       levers: "Liferau", "levers-hint": "Llusgwch sbardun neu bwysau. Bydd y model yn setlo i gyflwr newydd. Nodir y llinell sylfaen.",
-      actions: "Camau gweithredu", "actions-hint": "Cynyddwch gam. Bydd y model yn setlo i gyflwr newydd; mae'r graff yn dangos y rhaeadr.",
+      actions: "Camau gweithredu", "actions-hint": "0% = gwneud dim; 100% = lleddfu'r pwysau'n llawn. Graddau'r gweithredu ydyw, nid cost, cynllun na dichonoldeb.",
       "show-advanced": "Dangos pob paramedr (uwch)", "hide-advanced": "Cuddio paramedrau uwch",
       reset: "Ailosod", share: "Copio dolen rannu",
       inspect: "Archwilio cyswllt achosol", confidence: "Hyder SoNaRR:", strength: "Pa mor gryf yw'r cyswllt hwn?",
@@ -93,8 +94,9 @@
       "show-expert": "Addasu'r cyswllt (arbenigwr)", "hide-expert": "Cuddio rheolyddion arbenigwr",
       "expert-note": "Mae SoNaRR yn dweud bod y cyswllt yn bodoli ond nid pa mor gryf ydyw. Gosodwch eich barn a gweld yr effaith. Nid yw hyn yn newid tystiolaeth SoNaRR uchod.",
       "fan-note": "Bar gwyrdd = canlyniad tebygol yn ol eich rhagdyb. Band = ansicrwydd o hyder SoNaRR (lletach = llai sicr). Llinell doredig = llinell sylfaen SoNaRR.",
-      outcomes: "Cyflwr Cymru (allbwn y model)", "outcomes-hint": "Uwch = gwell. Marc = llinell sylfaen; band = ansicrwydd o hyder SoNaRR.",
-      leverage: "Trosoledd: ble i weithredu", "leverage-hint": "Pe bai'r pwysau/sbardun hwn yn cael ei leddfu, cyfanswm yr ennill ar draws pob cyflwr. Ailgyfrifir yn fyw.",
+      outcomes: "Cyflwr Cymru (allbwn y model)", "outcomes-hint": "Mynegai cyflwr cymharol (0-100, nid canran), wedi'i angori i SoNaRR. Marc = llinell sylfaen; band = ansicrwydd. Cymharwch y symudiadau.",
+      "grp-ecosystems": "Ecosystemau", "grp-resources": "Adnoddau naturiol",
+      leverage: "Trosoledd: ble i weithredu", "leverage-hint": "Ennill cyflwr cyfartalog fesul ecosystem/adnodd pe bai'r lifer hwn yn cael ei leddfu'n llawn. Rhestr - cymharwch y bariau.",
       "graph-hint": "Cliciwch nod neu gyswllt i archwilio. Sgroliwch i chwyddo, llusgwch i symud.",
       "k-driver": "Sbardun", "k-pressure": "Pwysau", "k-state": "Cyflwr ecosystem / adnodd", "k-service": "Gwasanaeth ecosystem",
       drivers_h: "Sbardunau uniongyrchol", pressures_h: "Pwysau allweddol",
@@ -434,20 +436,27 @@
 
   // ---- state bars ----------------------------------------------------------
   const STATE_NODES = MODEL.nodes.filter((n) => n.kind === "state_ecosystem" || n.kind === "state_resource");
+  function barFor(n) {
+    const delta = el("span", { class: "delta" });
+    const band = el("div", { class: "band" });
+    const fill = el("div", { class: "fill" });
+    const ghost = el("div", { class: "ghost" });
+    return el("div", { class: "bar", "data-id": n.id }, [
+      el("div", { class: "blbl" }, [el("span", { text: n.label }), delta]),
+      el("div", { class: "track" }, [band, fill, ghost]),
+    ]);
+  }
   function buildBars() {
     const host = document.getElementById("bars");
     clear(host);
-    STATE_NODES.forEach((n) => {
-      const delta = el("span", { class: "delta" });
-      const band = el("div", { class: "band" });
-      const fill = el("div", { class: "fill" });
-      const ghost = el("div", { class: "ghost" });
-      const bar = el("div", { class: "bar", "data-id": n.id }, [
-        el("div", { class: "blbl" }, [el("span", { text: n.label }), delta]),
-        el("div", { class: "track" }, [band, fill, ghost]),
-      ]);
-      host.appendChild(bar);
-    });
+    // SoNaRR keeps these as two distinct categories: 8 ecosystems and 3 natural
+    // resources (air, water, soil). Group them so that is clear.
+    const ecos = STATE_NODES.filter((n) => n.kind === "state_ecosystem");
+    const res = STATE_NODES.filter((n) => n.kind === "state_resource");
+    host.appendChild(el("div", { class: "bar-group", text: t("grp-ecosystems") + " (" + ecos.length + ")" }));
+    ecos.forEach((n) => host.appendChild(barFor(n)));
+    host.appendChild(el("div", { class: "bar-group", text: t("grp-resources") + " (" + res.length + ")" }));
+    res.forEach((n) => host.appendChild(barFor(n)));
   }
   function paintBars(act, bands) {
     // find the biggest movers so differentiation between ecosystems is explicit
@@ -471,12 +480,12 @@
         bandEl.style.width = Math.max(0, (bd.p90 - bd.p10) * 100).toFixed(1) + "%";
       }
       const dEl = barEl.querySelector(".delta");
-      const delta = a - b;
-      if (Math.abs(delta) < 0.005) dEl.textContent = "";
+      // show change on a relative 0-100 condition index (not a physical amount)
+      const d100 = Math.round((a - b) * 100);
+      if (d100 === 0) dEl.textContent = "";
       else {
-        // arrow glyph + sign give the direction without relying on colour
-        dEl.textContent = (delta > 0 ? "▲ +" : "▼ ") + delta.toFixed(2);
-        dEl.style.color = delta > 0 ? "var(--good)" : "var(--bad)";
+        dEl.textContent = (d100 > 0 ? "▲ +" : "▼ ") + Math.abs(d100);
+        dEl.style.color = d100 > 0 ? "var(--good)" : "var(--bad)";
       }
     });
   }
@@ -489,11 +498,13 @@
     const max = Math.max(0.001, ...lev.map((l) => Math.abs(l.delta)));
     lev.forEach((l) => {
       const w = (Math.abs(l.delta) / max) * 120;
+      // average gain per state assessment, on the same 0-100 index as the bars
+      const avg = Math.round((l.delta / STATE_NODES.length) * 100);
       const bar = el("span", { class: "levbar", style: "width:" + w + "px;background:" + (l.delta >= 0 ? "var(--good)" : "var(--bad)") });
       const row = el("div", { class: "lev-item", onclick: () => selectNode(l.id) }, [
         el("span", { class: "nm", text: l.label }),
         bar,
-        el("span", { class: "pct", text: (l.delta >= 0 ? "+" : "") + l.delta.toFixed(2) }),
+        el("span", { class: "pct", text: (avg >= 0 ? "+" : "") + avg }),
       ]);
       host.appendChild(row);
     });
