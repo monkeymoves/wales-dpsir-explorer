@@ -61,7 +61,7 @@
   const I18N = {
     en: {
       title: "Wales Systems Simulator",
-      subtitle: "A playable causal model of Wales, built from SoNaRR 2025 (DPSIR) - a thinking tool, not a forecast",
+      subtitle: "Built from SoNaRR 2025 (Natural Resources Wales) - DPSIR + Fuzzy Cognitive Map - a thinking tool, not a forecast - prototype",
       headline: "pressures assessed as deteriorating",
       levers: "Levers", "levers-hint": "Drag a driver or pressure. The model settles to a new state. Baseline is marked.",
       actions: "Actions", "actions-hint": "Turn up an action. The model settles to a new state; the graph shows the cascade.",
@@ -79,7 +79,7 @@
     },
     cy: {
       title: "Efelychydd Systemau Cymru",
-      subtitle: "Model achosol chwaraeadwy o Gymru, o SoNaRR 2025 (DPSIR) - teclyn meddwl, nid rhagolwg",
+      subtitle: "O SoNaRR 2025 (Cyfoeth Naturiol Cymru) - DPSIR + Map Gwybyddol Aneglur - teclyn meddwl, nid rhagolwg - prototeip",
       headline: "o bwysau yn dirywio",
       levers: "Liferau", "levers-hint": "Llusgwch sbardun neu bwysau. Bydd y model yn setlo i gyflwr newydd. Nodir y llinell sylfaen.",
       actions: "Camau gweithredu", "actions-hint": "Cynyddwch gam. Bydd y model yn setlo i gyflwr newydd; mae'r graff yn dangos y rhaeadr.",
