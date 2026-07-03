@@ -68,8 +68,10 @@
       "show-advanced": "Show all parameters (advanced)", "hide-advanced": "Hide advanced parameters",
       reset: "Reset to baseline", share: "Copy share link",
       inspect: "Inspect a causal link", confidence: "SoNaRR confidence:", strength: "How strong is this link?",
-      "strength-hint": "Your view of this link's strength. Middle = SoNaRR default; drag right = stronger, left = weaker.",
-      "fan-note": "Green bar = likely outcome given your prior. Shaded band = uncertainty from SoNaRR's confidence (wider = less certain). Dashed line = SoNaRR baseline.",
+      "strength-hint": "Middle = SoNaRR default; drag right = stronger, left = weaker.",
+      "show-expert": "Adjust this link (expert)", "hide-expert": "Hide expert controls",
+      "expert-note": "SoNaRR says the link exists but not how strong it is. Set your own view and see the effect. This does not change SoNaRR's evidence above.",
+      "fan-note": "Green bar = likely outcome given your view. Shaded band = uncertainty from SoNaRR's confidence (wider = less certain). Dashed line = SoNaRR baseline.",
       outcomes: "State of Wales (model output)", "outcomes-hint": "Higher = better. Marker = baseline; shaded band = uncertainty from SoNaRR confidence.",
       leverage: "Leverage: where to act", "leverage-hint": "If this single pressure/driver were relieved, total gain across all states. Recomputed live.",
       "graph-hint": "Click a node or link to inspect. Scroll to zoom, drag to pan.",
@@ -87,7 +89,9 @@
       "show-advanced": "Dangos pob paramedr (uwch)", "hide-advanced": "Cuddio paramedrau uwch",
       reset: "Ailosod", share: "Copio dolen rannu",
       inspect: "Archwilio cyswllt achosol", confidence: "Hyder SoNaRR:", strength: "Pa mor gryf yw'r cyswllt hwn?",
-      "strength-hint": "Eich barn am gryfder y cyswllt. Canol = rhagosodiad SoNaRR; de = cryfach, chwith = gwannach.",
+      "strength-hint": "Canol = rhagosodiad SoNaRR; de = cryfach, chwith = gwannach.",
+      "show-expert": "Addasu'r cyswllt (arbenigwr)", "hide-expert": "Cuddio rheolyddion arbenigwr",
+      "expert-note": "Mae SoNaRR yn dweud bod y cyswllt yn bodoli ond nid pa mor gryf ydyw. Gosodwch eich barn a gweld yr effaith. Nid yw hyn yn newid tystiolaeth SoNaRR uchod.",
       "fan-note": "Bar gwyrdd = canlyniad tebygol yn ol eich rhagdyb. Band = ansicrwydd o hyder SoNaRR (lletach = llai sicr). Llinell doredig = llinell sylfaen SoNaRR.",
       outcomes: "Cyflwr Cymru (allbwn y model)", "outcomes-hint": "Uwch = gwell. Marc = llinell sylfaen; band = ansicrwydd o hyder SoNaRR.",
       leverage: "Trosoledd: ble i weithredu", "leverage-hint": "Pe bai'r pwysau/sbardun hwn yn cael ei leddfu, cyfanswm yr ennill ar draws pob cyflwr. Ailgyfrifir yn fyw.",
@@ -593,6 +597,12 @@
     const open = adv.classList.toggle("advanced-hidden") === false;
     ev.target.textContent = open ? t("hide-advanced") : t("show-advanced");
   });
+  document.getElementById("toggle-expert").addEventListener("click", (ev) => {
+    const ex = document.getElementById("expert-adjust");
+    const open = ex.classList.toggle("advanced-hidden") === false;
+    ev.target.textContent = open ? t("hide-expert") : t("show-expert");
+    if (open && selectedEdge) drawFan(selectedEdge); // (re)draw gauge now it is visible
+  });
   document.getElementById("share").addEventListener("click", (ev) => {
     syncHash();
     if (navigator.clipboard) navigator.clipboard.writeText(location.href);
@@ -608,6 +618,9 @@
       const adv = document.getElementById("advanced");
       document.getElementById("toggle-advanced").textContent =
         adv.classList.contains("advanced-hidden") ? t("show-advanced") : t("hide-advanced");
+      const ex = document.getElementById("expert-adjust");
+      document.getElementById("toggle-expert").textContent =
+        ex.classList.contains("advanced-hidden") ? t("show-expert") : t("hide-expert");
       if (selectedEdge) showEdge(selectedEdge);
       syncHash();
     });
