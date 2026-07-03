@@ -10,21 +10,38 @@ permissions:
   pages: write
   id-token: write
 
+# queue overlapping runs rather than cancel them, so a retrying deploy is never
+# interrupted by a newer push
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.retry1.outputs.page_url || steps.retry2.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: prototype
-      - id: deployment
+      # GitHub Pages' deploy step is intermittently flaky ("Deployment failed,
+      # try again later"). Retry up to three times with short waits so a push
+      # publishes cleanly without a manual re-run.
+      - id: deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - if: steps.deploy.outcome == 'failure'
+        run: sleep 30
+      - id: retry1
+        if: steps.deploy.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - if: steps.deploy.outcome == 'failure' && steps.retry1.outcome == 'failure'
+        run: sleep 45
+      - id: retry2
+        if: steps.deploy.outcome == 'failure' && steps.retry1.outcome == 'failure'
         uses: actions/deploy-pages@v4
